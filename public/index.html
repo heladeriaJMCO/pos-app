@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>POS Local</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>POS Local</h1>
+    <nav>
+      <a href="/admin.html">Administración</a>
+    </nav>
+  </header>
+
+  <main class="grid-two">
+    <section class="panel">
+      <h2>Caja</h2>
+      <input id="search" placeholder="Buscar producto por nombre" />
+      <div id="product-list" class="list"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Carrito</h2>
+      <div id="cart-list" class="list"></div>
+
+      <div class="row">
+        <label>Descuento</label>
+        <input id="discount" type="number" min="0" step="0.01" value="0" />
+      </div>
+
+      <div class="row">
+        <label>Medio de pago</label>
+        <select id="payment-method">
+          <option value="Efectivo">Efectivo</option>
+          <option value="Tarjeta">Tarjeta</option>
+          <option value="Transferencia">Transferencia</option>
+        </select>
+      </div>
+
+      <h3 id="total">Total: $0.00</h3>
+      <button id="confirm-sale">Confirmar Venta</button>
+    </section>
+  </main>
+
+  <section class="panel">
+    <h2>Reporte básico</h2>
+    <div class="row-inline">
+      <input id="from-date" type="date" />
+      <input id="to-date" type="date" />
+      <button id="load-report">Cargar reporte</button>
+    </div>
+    <pre id="report-output"></pre>
+  </section>
+
+  <script src="/js/pos.js"></script>
+</body>
+</html>
