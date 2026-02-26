@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Administración POS</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Administración</h1>
+    <nav>
+      <a href="/index.html">Volver a Caja</a>
+    </nav>
+  </header>
+
+  <main class="grid-two">
+    <section class="panel">
+      <h2>ABM Rubros</h2>
+      <div class="row-inline">
+        <input id="category-name" placeholder="Nombre rubro" />
+        <button id="save-category">Guardar rubro</button>
+      </div>
+      <div id="category-list" class="list"></div>
+    </section>
+
+    <section class="panel">
+      <h2>ABM Productos</h2>
+      <div class="form-grid">
+        <input id="product-name" placeholder="Nombre" />
+        <input id="product-price" type="number" step="0.01" placeholder="Precio" />
+        <input id="product-stock" type="number" placeholder="Stock" />
+        <select id="product-category"></select>
+        <select id="product-active">
+          <option value="1">Activo</option>
+          <option value="0">Inactivo</option>
+        </select>
+        <button id="save-product">Guardar producto</button>
+      </div>
+      <div id="product-list-admin" class="list"></div>
+    </section>
+  </main>
+
+  <script src="/js/admin.js"></script>
+</body>
+</html>
